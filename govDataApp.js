@@ -5,12 +5,12 @@ myApp.controller('mainController', ['$scope', '$http', function ($scope, $http)
     $http.get('http://data.consumerfinance.gov/api/views.json')
         .success(function (result) 
             {
-            $scope.complaints = result.data;
-            console.log($scope.complaints);
+            $scope.complaints = result;
+            console.log("Hooray!  " + $scope.complaints);
             })
         .error(function (data, status) 
             {
-            console.log("Oops..." + data);
+            console.log("Oops...  " + data);
             });  
     }]);
 
