@@ -6,11 +6,11 @@ myApp.controller('mainController', ['$scope', '$http', function ($scope, $http)
         .success(function (result) 
             {
             $scope.complaints = result;
-            console.log("Hooray!  " + $scope.complaints);
+            console.log("Hooray!");
             })
         .error(function (data, status) 
             {
-            console.log("Oops...  " + data);
+            console.log("Oops...");
             });  
     }]);
 
